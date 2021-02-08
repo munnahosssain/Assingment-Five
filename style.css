@@ -23,3 +23,7 @@ body{
     /* display: flex;  */
     /* float: left; */
 }
+.card-body2{
+    float: left;
+    width: 50%;
+}
