@@ -2,16 +2,24 @@
 body{
     padding: 0;
     margin: 0;
-    /* backgr/ound-color: whitesmoke; */
+    /* background-color: whitesmoke; */
 }
-.images-size{
+.logo-image{
     width: 100px;
 }
 .text-color{
     color: #330603;
 }
 .search-bar{
+    color: white;
     height: 50px;
     width: 70%;
-    border-radius: 50px;
+    border-radius: 5px;
+    background-color: #e7fcd3;
+}
+.img-size{
+    width: 20%;
+    border-radius: 10px;
+    /* display: flex;  */
+    /* float: left; */
 }
