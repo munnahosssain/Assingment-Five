@@ -1,4 +1,3 @@
-
 const findFoods = () => {
     
     const searchFood = document.getElementById('search-field').value;
@@ -9,7 +8,7 @@ const findFoods = () => {
 }
 const displayFoods = foods => {
     const foodContainer = document.getElementById('food-container');
-
+    foodContainer.innerHTML="";
     foods.forEach(food => {
         console.log(food);
         const foodDiv = document.createElement('div');
@@ -22,21 +21,19 @@ const displayFoods = foods => {
                 <div class="mt-2">
                 <button onclick="getFood('${food.strMeal}')" class="btn btn-outline-success" type="submit">Click</button>
                 </div>
-
             </div>
         </div>
         `;
         foodContainer.appendChild(foodDiv);
-    })
+    });
 }
-
-// const getFood = catagories => {
-//     const url = `https://www.themealdb.com/api/json/v1/1/categories.php`
-//     fetch(url)
-//         .then(res => res.json())
-//         .then(data => displayFood(data.categories));
-// }
-// const displayFood = food => {
-//     const foodsDiv = document.getElementById('food-categories');
-//     foodsDiv.innerText = food;
-// }
+const getFood = catagories => {
+    const url = `https://www.themealdb.com/api/json/v1/1/categories.php`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayFood(data.categories));
+}
+const displayFood = food => {
+    const foodsDiv = document.getElementById('food-categories');
+    foodsDiv.innerText = food;
+}
