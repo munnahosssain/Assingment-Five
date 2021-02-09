@@ -36,7 +36,7 @@ const getFood = async (idMeal) => {
         const res = await fetch(url);
         const data = await res.json();
         console.log(data);
-        
+
         displayFood(data.strIngredient1);
 
         // .then(res => res.json())
