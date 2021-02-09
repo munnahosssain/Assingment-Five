@@ -12,13 +12,15 @@ const displayFoods = foods => {
     foods.forEach(food => {
         console.log(food);
         const foodDiv = document.createElement('div');
+        
         foodDiv.className = 'col mt-5'
         foodDiv.innerHTML = `
+        
         <div class="text-center shadow">
             <div class="card-body card-body2">
-                <button onclick="getFood('${food.strMeal}')" class="btn" type="submit">
+                <button onclick="getFood('${food.strCategory}')" class="btn" type="submit">
                 <img src="${food.strMealThumb}" class="img-size card-img-top " alt="...">
-                <h5 class="card-title">${food.strArea}</h5>
+                <h5 class="card-title">${food.strMeal}</h5>
                 </button>
             </div>
         </div>
